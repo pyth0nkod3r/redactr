@@ -1,37 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Redactr</title>
     <link rel="stylesheet" href="redactr.css" type="text/css" media="all" />
-</head>
+  </head>
 
-<body>
-    <header class="header">
-        
-        <h1 class="welcome">Welcome to Redactr</h1>
-        
+  <body class="container">
+    <header>
+      <h1>Welcome to Redactr</h1>
     </header>
-    
-    <main>
-        <form class="form" action="" method="get" accept-charset="utf-8">
-            <p id="p1">
-                Enter your post below:
-            </p>
-            <textarea name="text" id=text rows="8" cols="40"></textarea> <br />
-            <p>
-                What words do you want to scramble?
-            </p>
-            
-            <input type="submit" name="Submit" id="Submit" value="Redact Me" />
-        </form>
-    </main>
-    
-    
-    <script src="redactr.js" type="text/javascript" charset="utf-8"></script>
-</body>
 
+    <main>
+      <p id="p1">Enter your post below:</p>
+      <textarea id="post" rows="8" cols="40"></textarea> <br />
+      <p id="p2">
+        What words do you want to scramble?
+        <br />
+        <input type="text" id="selection" placeholder="space multiple words" />
+      </p>
+      <p id="p2">
+        What do you want to replace it with?
+        <br />
+        <input type="text" id="scrambler" placeholder="e.g., ***" />
+      </p>
+      <button onclick="word_scrambler()">Redact Me</button>
+      <div id="scrambled">
+        <p>Scrambled post:</p>
+        <div id="output"></div>
+      </div>
+
+      <div id="stats">
+        <p>Words scanned: <span id="wordsScanned">0</span></p>
+        <p>Words matched: <span id="wordsMatched">0</span></p>
+        <p>Characters scrambled: <span id="charactersScrambled">0</span></p>
+        <p>Time taken: <span id="timeTaken">0</span> seconds</p>
+      </div>
+    </main>
+
+    <script src="redactr.js" type="text/javascript" charset="utf-8"></script>
+  </body>
 </html>

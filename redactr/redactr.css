@@ -1,8 +1,56 @@
-.welcome {
+.container {
+    max-width: 50rem;
+    margin: 0 auto;
+    padding: 20px;
     text-align: center;
+    background-color: black;
+}
+
+header {
     color: green;
 }
 
-#p1 {
-    color: white;
+#p1, #p2, #stats, #scrambled {
+    color: rgb(243, 234, 234);
+    margin-bottom: 10px;
+    margin-top: 20px;
+    text-align: center;
+
+}
+
+textarea, .post {
+    border: dashed blue 3px;
+    font-family: fantasy;
+    background-color: white;
+    color: black;
+    
+}
+
+#scrambled {
+  margin-top: 20px;
+  border: 4px;
+
+}
+
+input:placeholder-shown {
+    margin-top: 3px;
+    text-align: center;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+button {
+  padding: 8px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#output {
+  font-weight: bold;
+  color: #ff0000;
 }
